@@ -1,0 +1,76 @@
+.back{
+	margin-left:560px;
+	margin-top: -25px;
+}
+.bg-light{
+	background-color: #b2c5e3!important;
+}
+.chart-title{
+	color: #FFFFFF;
+	font-weight: 500;
+}
+.nav-link{
+	color: #FFFFFF;
+}
+.text-logo{
+	margin-left: 20px;
+}
+.logo-img a img{
+	text: center;
+	margin-right: -80px;
+}
+.navbar-brand .logo-img{
+	margin-top: 15px;
+}
+.dt-buttons{
+	margin-left: 200px;
+	margin-top: -40px;
+}
+.dataTables_length{
+	margin-left: 25px;
+}
+.btn:hover{
+	color: #fff;
+}
+.btn-close{
+	color: #fff;
+    background-color: #919693;
+    border-color: #919693;
+    box-shadow: none;
+}
+.btn-close hover{
+
+}
+.btn-update{
+	color: #fff;
+    background-color: #A378C9;
+    border-color:#A378C9;
+    box-shadow: none;
+}
+.btn-create{
+	color: #fff;
+    background-color:#A378C9;
+    border-color:#A378C9;
+    box-shadow: none;
+}
+.btn-edit{
+	color: #fff;
+    background-color:#A378C9;
+    border-color:#A378C9;
+    box-shadow: none;
+}
+.btn-back {
+	color: #fff;
+    background-color:#A378C9;
+    border-color:#A378C9 ;
+    box-shadow: none;
+}
+label{
+	color: #495057;
+	font-weight: 500 !important;
+}
+/*#46C9B8*/
+.modal-dialog {
+    max-width: 700px !important;
+   
+}

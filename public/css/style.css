@@ -1,0 +1,49 @@
+.back{
+	margin-left:550px;
+    margin-top: -25px;
+}
+.navbar-dark .rainmaker-brand {
+    color: #fff;
+    font-weight: 700;
+}
+.rainmaker-brand{
+	display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 6rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.text-center {
+	margin-top: 20px;
+}
+.btn-info {
+    color: #33b5e5 !important;
+    background-color: #bf191900 !important;
+    border: 2px solid #33b5e5 !important;
+	border-radius: 25px;
+
+}
+.btn-info:hover{
+	background-color: #33b5e5 !important;
+	color: #FFFFFF !important;
+}
+
+
+.btn-rounded{
+	border-radius: 25px;
+}
+.border-light{
+    background-color: #fff;
+}
+
+.data_th{
+    background-color: #A378C9;
+    color: #fff;
+    text-align: center;
+}
+.data_td{
+    text-align: center;
+}
+

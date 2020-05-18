@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://www.learn-js.org/en/Arrays -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial</title>
+    
+    <meta name="description" content="learn-js.org is a free interactive JavaScript tutorial for people who want to learn JavaScript, fast.">
+    <meta name="keywords" content="Learn,JavaScript,Tutorial,Interactive,Free">
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Arrays - Learn JavaScript - Free
+    Interactive JavaScript Tutorial">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.learn-js.org/">
+    <meta property="og:image" content="https://www.learn-js.org/static/img/share-logos/learn-js.org.png">
+
+    <link rel="icon" href="https://www.learn-js.org/static/img/favicons/learn-js.org.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/codemirror.css">
+    <link rel="stylesheet" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/xq-light.css">
+    <link rel="stylesheet" type="text/css" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/prism-light.css">
+    <link rel="stylesheet" type="text/css" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/learnpython.css">
+
+
+    <script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/amp4ads-host-v0.js"></script><script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/osd.js"></script><script async="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/analytics.js"></script><script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(4).txt"></script><script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(5).txt" id="google_shimpl"></script><script async="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(6).txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+<link rel="preload" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(7).txt" as="script"><script type="text/javascript" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(7).txt"></script><link rel="preload" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(8).txt" as="script"><script type="text/javascript" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(8).txt"></script><style type="text/css">div.datacamp-exercise {  margin: 0;  border: 1px solid #d5eaef;  background: none;  position: relative;  min-height: 300px;  color: black;  box-shadow: none;}div[data-datacamp-exercise] {  margin: 0;  border: 1px solid #d5eaef;  background: #fff url(https://cdn.datacamp.com/spinner.gif) no-repeat center center !important;  background-size: auto 80px !important;  position: relative;  min-height: 300px;  color: transparent;  box-shadow: none;}div[data-datacamp-exercise] > code,div[data-datacamp-exercise] > div,div[data-datacamp-exercise] > p {  display: none;}div.powered-by-datacamp {  margin: 5px 0;  display: block;}div.powered-by-datacamp a {@import "https://fonts.googleapis.com/css?family=Open+Sans";  font-family: "Open Sans", sans-serif;  text-decoration: none;  border: 0;  color: #3ac;  font-size: 20px;}div.powered-by-datacamp .logo {  vertical-align: sub;  display: inline-block;  background: url("https://cdn.datacamp.com/dcl/assets/images/logo_blue.svg") no-repeat center center;  background-size: contain;  height: 27px;  width: 23px;  margin-left: 4px;}</style><link type="text/css" rel="stylesheet" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/style-8c2f2e17fe.css"><link type="text/css" rel="stylesheet" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/font-awesome.min.css"><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style></head>
+<body cz-shortcut-listen="true">
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="https://www.learn-js.org/">
+        <img src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/learn-js.org.png" style="height: 24px;" alt="JavaScript">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="https://www.learn-js.org/">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item mr-sm-2">
+                <a class="nav-link" href="https://www.learn-js.org/about">About</a>
+            </li>
+
+            <li class="nav-item mr-sm-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="https://www.learn-js.org/en/Arrays#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item" href="https://www.learnpython.org/">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item disabled" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="https://www.learn-js.org/en/Arrays#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item disabled" href="https://www.learn-js.org/en/">English</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="line-height: 30px">
+                <span></span>
+                <span></span>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnpython.org/">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link active" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main" style="height: auto !important;">
+    <div class="row" style="height: auto !important;">
+        <div class="col-12" style="height: auto !important; min-height: 0px !important;">
+
+            <div class="mb-3">
+                <script async="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(6).txt"></script>
+                <!-- Interactive Tutorials Top -->
+                <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-3723950136133694" data-ad-slot="2345161899" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:1110px;background-color:transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 1110px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:1110px;height:280px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1110" height="280" frameborder="0" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CNGAue_IhOkCFUEeaAodp10ClA" data-load-complete="true"></iframe></ins></ins></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            
+                <ul class="breadcrumb" style="margin-top: 10px">
+                    
+                        <li><a href="https://www.learn-js.org/en/Welcome">Welcome</a> <span class="divider mr-1">/</span></li>
+                    
+                    <li class="active">Arrays</li>
+                </ul>
+            
+
+        </div>
+
+    </div>
+
+    <div class="row" style="height: auto !important;">
+
+        <div class="col col-lg-10" style="height: auto !important; min-height: 0px !important;">
+            <div id="inner-text">
+                
+                    <h1>Arrays</h1>
+                    <hr>
+                
+                <p>JavaScript can hold an array of variables in an Array object. In JavaScript, an array also functions as a list, a stack or a queue. </p>
+<p>To define an array, either use the brackets notation or the Array object notation:</p>
+<pre class="  language-javascript"><code class="  language-javascript"><span class="token keyword">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> theSameArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3>Addressing</h3>
+<p>We can use the brackets <code class="  language-javascript"><span class="token punctuation">[</span><span class="token punctuation">]</span></code> operator to address a specific cell in our array. Addressing uses zero-based indices, so for example, in <code class="  language-javascript">myArray</code> the 2nd member can be addressed with index 1. One of the benefits of using an array datastructure is that you have constant time look-up, if you already know the index of the element you are trying to access.</p>
+<pre class="  language-javascript"><code class="  language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myArray<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">// prints out 2</span>
+</code></pre>
+<p>Arrays in JavaScript are sparse, meaning that we can also assign variables to random locations even though previous cells were undefined. For example:</p>
+<pre class="  language-javascript"><code class="  language-javascript"><span class="token keyword">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+myArray<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"hello"</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Will print out:</p>
+<pre class="  language-javascript"><code class="  language-javascript"><span class="token punctuation">[</span>undefined<span class="token punctuation">,</span> undefined<span class="token punctuation">,</span> undefined<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">]</span>
+</code></pre>
+<h3>Array Elements</h3>
+<p>Because JavaScript Arrays are just special kinds of objects, you can have elements of different types stored together in the same array. The example below is an array with a string, a number, and an empty object.</p>
+<pre class="  language-javascript"><code class="  language-javascript"><span class="token keyword">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"string"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+</code></pre>
+<h2>Exercise</h2>
+<p>You must define an array with the following three variables:</p>
+<ol>
+<li>A string which has the value of "What is the meaning of life?"</li>
+<li>A number which has a value of <code class="  language-javascript"><span class="token number">42</span></code></li>
+<li>A boolean which has a value of <code class="  language-javascript"><span class="token boolean">true</span></code></li>
+</ol>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <button id="start-exercise" class="btn btn-success pull-left mt-2" onclick="reset()">
+                        <i class="fas fa-play" aria-hidden="true"></i> Start Exercise
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row mt-2 mb-2">
+                <div class="col">
+                    
+                        <a class="btn btn-primary pull-left" href="https://www.learn-js.org/en/Variables_and_Types">
+                            <i class="fas fa-angle-double-left" aria-hidden="true"></i> Previous Tutorial
+                        </a>
+                    
+
+
+                    
+                        <a class="btn btn-primary pull-right" href="https://www.learn-js.org/en/Manipulating_Arrays">
+                            Next Tutorial <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <script async="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(6).txt"></script>
+                    <!-- Interactive Tutorials Bottom -->
+                    <ins class="adsbygoogle" style="display: block; height: 350px; width: 920px;" data-ad-client="ca-pub-3723950136133694" data-ad-slot="6124145877" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display: inline-table; border: none; height: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 920px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 920px; background-color: transparent; overflow: hidden;"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 920px; height: 350px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="920" height="350" frameborder="0" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CJP7wu_IhOkCFdcfaAodlqEKng" data-load-complete="true"></iframe></ins></ins></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                <h4>Chapters</h4>
+                <hr>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Hello%2C_World%21">Hello, World!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Variables_and_Types">Variables and Types</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Arrays">Arrays</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Manipulating_Arrays">Manipulating Arrays</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Operators">Operators</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Conditions">Conditions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Loops">Loops</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Objects">Objects</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Functions">Functions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Pop-up_Boxes">Pop-up Boxes</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Callbacks">Callbacks</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Object_Oriented_JavaScript">Object Oriented JavaScript</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Function_Context">Function Context</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Inheritance">Inheritance</a>
+                        </div>
+                    
+                        <div>
+                            <a href="https://www.learn-js.org/en/Contributing_Tutorials">Contributing Tutorials</a>
+                        </div>
+                    
+                </div>
+
+                <h4 class="mt-3">Sponsors</h4>
+                <hr>
+                <div class="mt-3">
+                    <script async="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/f(6).txt"></script>
+                    <!-- Interactive Tutorials Right -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-3723950136133694" data-ad-slot="5528539062" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:160px;height:600px;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="160" height="600" frameborder="0" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-load-complete="true" data-google-query-id="CJjX0O_IhOkCFYGVaAodD4ICGA"></iframe></ins></ins></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="mt-3">
+                    <a href="https://digitalocean.com/" target="_blank">
+                        <img src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/digital-ocean.png" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="http://www.spoj.com/?utm_campaign=permanent&amp;utm_medium=banner&amp;utm_source=learnx" target="_blank">
+                        <img src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/spoj.png" style="width: 160px" alt="Sphere Engine">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- row -->
+
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright © learn-js.org. Read our <a href="https://www.learn-js.org/tos">Terms of Use</a> and <a href="https://www.learn-js.org/privacy">Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="dock" class="maximized">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col-10 text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <i class="fas fa-play" aria-hidden="true"></i> Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt" aria-hidden="true"></i> Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-sm btn-success" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down" aria-hidden="true"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code" style="display: none;">// TODO: change myArray to contain the variables
+var myArray = [];
+console.log(myArray[0]);
+console.log(myArray[1]);
+console.log(myArray[2]);</textarea><div class="CodeMirror cm-s-xq-light CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 343.094px;"><textarea autocorrect="off" autocapitalize="off" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 21px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar" style="bottom: 0px;"><div style="width: 1px; height: 5px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div style="position: relative; min-height: 100%;"><div class="CodeMirror-sizer" style="min-width: 355.094px; min-height: 23px; margin-left: 21px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span class="cm-keyword">v</span><span class="cm-keyword">a</span><span class="cm-keyword">r</span><span> </span><span class="cm-variable">m</span><span class="cm-variable">y</span><span class="cm-variable">A</span><span class="cm-variable">r</span><span class="cm-variable">r</span><span class="cm-variable">a</span><span class="cm-variable">r</span><span class="cm-variable">y</span><span>=</span><span>[</span><span class="cm-string">"</span><span class="cm-string">W</span><span class="cm-string">h</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string"> </span><span class="cm-string">i</span><span class="cm-string">s</span><span class="cm-string"> </span><span class="cm-string">t</span><span class="cm-string">h</span><span class="cm-string">e</span><span class="cm-string"> </span><span class="cm-string">m</span><span class="cm-string">e</span><span class="cm-string">a</span><span class="cm-string">n</span><span class="cm-string">i</span><span class="cm-string">n</span><span class="cm-string">g</span><span class="cm-string"> </span><span class="cm-string">o</span><span class="cm-string">f</span><span class="cm-string"> </span><span class="cm-string">l</span><span class="cm-string">i</span><span class="cm-string">f</span><span class="cm-string">e</span><span class="cm-string">?</span><span class="cm-string">"</span><span>,</span><span class="cm-number">4</span><span class="cm-number">2</span><span>,</span><span class="cm-atom">t</span><span class="cm-atom">r</span><span class="cm-atom">u</span><span class="cm-atom">e</span><span>]</span><span>;</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div style="position: relative; z-index: 1; display: none;"><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 57px; width: 144.875px; height: 14px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 0px; width: 515px; height: 57px;"></div></div><div style=""><div style="position: relative;"><div style="position: absolute; left: -21px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="width: 12px;">1</div></div><pre><span class="cm-keyword">var</span> <span class="cm-variable">myArrary</span>=[<span class="cm-string">"What is the meaning of life?"</span>,<span class="cm-number">42</span>,<span class="cm-atom">true</span>];</pre></div></div><div class="CodeMirror-cursor" style="left: 322.094px; top: 0px; height: 15px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; top: 23px;">&nbsp;</div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 20px;"></div></div></div></div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col-9 text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output" style="display: none;"></textarea><div class="CodeMirror cm-s-xq-light"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar" style="bottom: 0px;"><div style="width: 1px; height: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div style="position: relative; min-height: 100%;"><div class="CodeMirror-sizer" style="min-width: 96.9219px; min-height: 64px; margin-left: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>u</span><span>n</span><span>d</span><span>e</span><span>f</span><span>i</span><span>n</span><span>e</span><span>d</span></pre></div><div style="position: relative; z-index: 1; display: none;"></div><div style=""><pre>undefined</pre><pre>undefined</pre><pre>undefined</pre><pre>&nbsp;</pre></div><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 14px;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="display: none;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; top: 64px;">&nbsp;</div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine ™</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/saved_resource(1).html"></iframe>
+                            <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/saved_resource(2).html"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/prism.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/datacamp-light-latest.min.js"></script>
+
+<script async="" defer="" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/buttons.js"></script>
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/e7efaf7ef6.js"></script><link rel="stylesheet" href="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/pro.min.css" media="all">
+
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/codemirror.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/matchbrackets.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/clike.js"></script>
+
+
+
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/javascript.js"></script>
+
+
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/xml.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/css.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/htmlembedded.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/htmlmixed.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/bootstrap.min.js"></script>
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/bootbox.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'learn-js.org');
+  ga('create', 'UA-22741967-5', 'learn-js.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+<script>
+    var domainData = {"language_id": 35, "sender": "learn-js.org <admin@learn-js.org>", "favicon": "/static/img/favicons/learn-js.org.ico", "support_email": "support@learn-js.org", "language": "javascript", "courses": [{"category": "Development", "advertiser": "Udemy", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.851712&type=2&subid=0", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/851712_fc61_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.851712&type=2&subid=0\" >", "link_id": "851712", "link_name": "The Complete JavaScript Course: Build a Real-World Project", "image_url": "https://udemy-images.udemy.com/course/480x270/851712_fc61_4.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F", "retail_price": 195.0}, {"category": "Development", "advertiser": "Udemy", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.861624&type=2&subid=0", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.861624&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-es6-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/861624_864d_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.861624&type=2&subid=0\" >", "link_id": "861624", "link_name": "ES6 Javascript: The Complete Developer's Guide", "image_url": "https://udemy-images.udemy.com/course/480x270/861624_864d_2.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.861624&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-es6-tutorial%2F", "retail_price": 80.0}, {"category": "Development", "advertiser": "Udemy", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.364426&type=2&subid=0", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.364426&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funderstand-javascript%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/364426_2991_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.364426&type=2&subid=0\" >", "link_id": "364426", "link_name": "JavaScript: Understanding the Weird Parts", "image_url": "https://udemy-images.udemy.com/course/480x270/364426_2991_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.364426&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funderstand-javascript%2F", "retail_price": 175.0}, {"category": "Development", "advertiser": "Udemy", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1351318&type=2&subid=0", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1351318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-step-by-step-guide-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1351318_b207_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1351318&type=2&subid=0\" >", "link_id": "1351318", "link_name": "JavaScript - Step By Step Guide For Beginners", "image_url": "https://udemy-images.udemy.com/course/480x270/1351318_b207_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1351318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-step-by-step-guide-for-beginners%2F", "retail_price": 115.0}, {"category": "Development", "advertiser": "Udemy", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1342418&type=2&subid=0", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1342418&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-training%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1342418_b2f3_10.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1342418&type=2&subid=0\" >", "link_id": "1342418", "link_name": "The Complete JavaScript Course - Beginner to Professional", "image_url": "https://udemy-images.udemy.com/course/480x270/1342418_b2f3_10.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1342418&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-training%2F", "retail_price": 200.0}], "language_code": "en", "namespace": "learn-js.org", "prism_mode": "language-javascript", "language_uppercase": "JavaScript", "analytics": "UA-22741967-5", "contact_email": "admin@learn-js.org", "default_code": "// Welcome to the Interactive JavaScript Tutorial.\n// Start by choosing a chapter and\n// write your code in this window.\n\nconsole.log(\"Hello, World!\");\n", "styled_domain": "learn-js.org", "logo": "/static/img/logos/learn-js.org.png", "share_logo": "/static/img/share-logos/learn-js.org.png", "full_url": "https://www.learn-js.org", "codemirror_mode": "text/javascript"};
+    var nextChapter = "/en/Manipulating_Arrays";
+    var previousChapter = "/en/Variables_and_Types";
+    var backChapter = "/en/Welcome";
+    var tutorialData = {"code": "// TODO: change myArray to contain the variables\nvar myArray = [];\nconsole.log(myArray[0]);\nconsole.log(myArray[1]);\nconsole.log(myArray[2]);", "page_title": "Arrays", "links": [], "text": "<p>JavaScript can hold an array of variables in an Array object. In JavaScript, an array also functions as a list, a stack or a queue. </p>\n<p>To define an array, either use the brackets notation or the Array object notation:</p>\n<pre><code>var myArray = [1, 2, 3];\nvar theSameArray = new Array(1, 2, 3);\n</code></pre>\n<h3>Addressing</h3>\n<p>We can use the brackets <code>[]</code> operator to address a specific cell in our array. Addressing uses zero-based indices, so for example, in <code>myArray</code> the 2nd member can be addressed with index 1. One of the benefits of using an array datastructure is that you have constant time look-up, if you already know the index of the element you are trying to access.</p>\n<pre><code>console.log(myArray[1]);      // prints out 2\n</code></pre>\n<p>Arrays in JavaScript are sparse, meaning that we can also assign variables to random locations even though previous cells were undefined. For example:</p>\n<pre><code>var myArray = []\nmyArray[3] = \"hello\"\nconsole.log(myArray);\n</code></pre>\n<p>Will print out:</p>\n<pre><code>[undefined, undefined, undefined, \"hello\"]\n</code></pre>\n<h3>Array Elements</h3>\n<p>Because JavaScript Arrays are just special kinds of objects, you can have elements of different types stored together in the same array. The example below is an array with a string, a number, and an empty object.</p>\n<pre><code>var myArray = [\"string\", 10, {}]\n</code></pre>\n<h2>Exercise</h2>\n<p>You must define an array with the following three variables:</p>\n<ol>\n<li>A string which has the value of \"What is the meaning of life?\"</li>\n<li>A number which has a value of <code>42</code></li>\n<li>A boolean which has a value of <code>true</code></li>\n</ol>", "solution": "// TODO: change myArray to contain the variables\nvar myArray = [\"What is the meaning of life?\", 42, true];\nconsole.log(myArray[0]);\nconsole.log(myArray[1]);\nconsole.log(myArray[2]);", "is_tutorial": true, "previous_chapter": "Variables_and_Types", "output": "What is the meaning of life?\n42\ntrue", "next_chapter": "Manipulating_Arrays", "back_chapter": "Welcome"};
+</script>
+
+<script src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/learnpython.js"></script>
+
+
+
+<script type="text/javascript" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/script-8fa338a2dc.js" charset="utf-8"></script><iframe id="google_osd_static_frame_7912391759414" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/saved_resource(3).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./Arrays - Learn JavaScript - Free Interactive JavaScript Tutorial_files/zrt_lookup.html" data-ad-client="ca-pub-3723950136133694" style="display: none;"></iframe></html>
