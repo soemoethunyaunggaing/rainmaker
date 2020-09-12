@@ -72,7 +72,7 @@ class HomeController extends Controller
        
         // $ygn_value=$yangon->sum('value');
         // dd($chin);
-        return view('frontend.data.R1', compact('regions','all','categories','alldata','year','amount','year1'));
+        return view('frontend.data.R1', compact('regions','all','categories','alldata','year','amount'));
     }
 
     public function getData( $request)
